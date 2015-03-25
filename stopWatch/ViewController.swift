@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var display: UILabel!
     var timer = NSTimer()
     var count = 0
     
@@ -17,7 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("result"), userInfo: nil, repeats: true)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,9 +26,31 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func result(){
+    @IBAction func play(sender: UIBarButtonItem) {
+        //starting the timer
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+    }
+    
+    
+    @IBAction func stop(sender: UIBarButtonItem) {
+        //stoping the timer
+        timer.invalidate()
+        
+        //resetting the count and display screen
+        count = 0
+        display.text = "0"
+        
+    }
+    
+    
+    @IBAction func pause(sender: UIBarButtonItem) {
+        timer.invalidate()
+    }
+    
+    
+    func updateTimer(){
         count++
-        print("\(count) \n")
+        display.text = "\(count)"
     }
 
 
