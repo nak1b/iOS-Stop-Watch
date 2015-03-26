@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -45,7 +46,7 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2E-d1-IT1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2E-d1-IT1">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -71,12 +72,12 @@
                                 <exclude reference="M2E-d1-IT1"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="BSa-gS-8kH"/>
+                                <exclude reference="HXL-t7-xaD"/>
+                                <exclude reference="jUN-cd-Xd5"/>
                                 <exclude reference="Y2k-wZ-bhC"/>
                                 <exclude reference="kGw-Fu-kf8"/>
                                 <exclude reference="rnM-0L-8fM"/>
-                                <exclude reference="HXL-t7-xaD"/>
-                                <exclude reference="jUN-cd-Xd5"/>
-                                <exclude reference="BSa-gS-8kH"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -86,12 +87,12 @@
                                 <include reference="M2E-d1-IT1"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="BSa-gS-8kH"/>
+                                <include reference="HXL-t7-xaD"/>
+                                <include reference="jUN-cd-Xd5"/>
                                 <include reference="Y2k-wZ-bhC"/>
                                 <include reference="kGw-Fu-kf8"/>
                                 <include reference="rnM-0L-8fM"/>
-                                <include reference="HXL-t7-xaD"/>
-                                <include reference="jUN-cd-Xd5"/>
-                                <include reference="BSa-gS-8kH"/>
                             </mask>
                         </variation>
                     </view>
